@@ -1,0 +1,7 @@
+namespace :first_look_db do
+  desc "Adds one month to the Look Subscription"
+  FirstSubscription.where(subscription_state: 'active').each do |t|
+        t.update_attribute :next_billing_check, '2007-9-10'
+
+  end
+end
